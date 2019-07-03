@@ -44,6 +44,7 @@ header .submenu {
     padding: 20px 0px;
 }
 
+/*comienzo del header*/
 header .submenu i {
     color: #fa573a;
     margin-right: 10px;
@@ -94,6 +95,57 @@ header nav li a:hover{
 
 header nav li .activo {
     color: #fa573a
+}
+/*fin de header*/
+
+/*comienzo del hero*/
+
+/*con este comando, estamos configurando la imagen de la burguer*/
+.hero {
+    background-image: url(../images/fondo.jpg);
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-color: #444;
+    background-blend-mode: soft-light;
+}
+
+.hero>div {
+    padding: 15% 10%;
+    color: white;
+}
+
+.hero>div h1{
+    font-size: 2em;
+    font-family: "handlee", cursive;
+}
+
+.hero>div h2{
+    color: #fa573a;
+    font-size: 1.25em;
+    padding: .8em 0%;
+}
+
+.hero .boton {
+    background-color: #fa573a;
+    padding: .9em;
+    display: inline-block;
+    margin: .8em 0%;
+    border: 2px solid #fa573a;
+}
+
+.hero .boton:hover {
+    background: transparent;
+    color: #fa573a;
+}
+
+.hero .social {
+    display: flex;
+}
+
+.hero .social li {
+    margin-right: 15px;
+    font-size: 1.5em;
 }
 
 /*el @media hace que podamos hacer la web responsive.  Todo lo que esta fuera de @media es para desktop*/
@@ -151,5 +203,9 @@ header nav li .activo {
 /*el last child o los comandos de este tipo indican cual de los elementos quiero que afecte la orden que le doy.  En este caso solo elimina la ultima linea de los items*/
     header nav .menu li:last-child {
         border-bottom: 0px;
+    }
+
+    .hero {
+        height: 450px;
     }
 }
