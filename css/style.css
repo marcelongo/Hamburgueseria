@@ -147,6 +147,93 @@ header nav li .activo {
     margin-right: 15px;
     font-size: 1.5em;
 }
+/*terminamos la seccion hero*/
+
+/*comenzamos la seccion main*/
+
+section {
+    padding: 50px;
+}
+
+main section h2 {
+color: black;
+font-family: "handlee", cursive;
+text-align: center;
+font-size: 2em;
+}
+
+main section h2 span {
+    color: #fa573a;
+}
+
+main section .underline {
+    position: relative;
+    width: 9.375em;
+    margin: 0 auto;
+    color: #fa573a;
+}
+
+main section .underline hr {
+    border-color: #fa573a;
+}
+
+main section .underline span {
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    top: -7px;
+    left: 67px;
+}
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+main section .flex article {
+    width: 33%;
+    border-left: 1px solid #444;
+    padding: 0 25px;
+}
+
+main #ourservices article .icon {
+color: #fa573a;
+border: 2px solid #fa573a;
+padding: 10px;
+font-size: 120%;
+}
+
+main #ourservices article h3 {
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 120%;
+}
+
+main #ourservices article p {
+    color: #aaa;
+}
+
+/*con esta regla cambiamos la posicion de la imagen del camion*/
+.fa-truck-moving {
+    transform: rotateY(180deg);
+}
+
+main .enlace {
+    color: #fa573a;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+    display: inline-block;
+}
+
+/*con esto estamos haciendo la animacion de las fechitas de "leer mas"*/
+main .enlace i {
+    transition: 1s;
+}
+
+main .enlace:hover i {
+    transform: translate(10px);
+}
 
 /*el @media hace que podamos hacer la web responsive.  Todo lo que esta fuera de @media es para desktop*/
 @media (max-width: 768px) {
@@ -161,7 +248,22 @@ header nav li .activo {
     header .submenu .row div:nth-child(3), header .submenu .row div:nth-child(4) {
         text-align: center;
     }
+
+    main section .flex article {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    main section .flex article:last-child {
+        width: 100%;
+    }
+
+    main section .flex article:first-child, main section .flex article:last-child {
+        border-left: 0px;
+    }
 }
+
+
 
 @media (max-width: 600px) {
     header .submenu .row div a span {
@@ -207,5 +309,13 @@ header nav li .activo {
 
     .hero {
         height: 450px;
+    }
+/*con esto estamos poniendo las rallas debajo en vez de al lado en movil*/
+
+    main section .flex article {
+        width: 100%;
+        border-left: 0px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
     }
 }
