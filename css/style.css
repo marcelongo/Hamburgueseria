@@ -111,7 +111,7 @@ header nav li .activo {
 }
 
 .hero>div {
-    padding: 15% 10%;
+    padding: 15% 0%;
     color: white;
 }
 
@@ -301,6 +301,7 @@ main .enlace:hover i {
         text-align: center;
         padding: 20px;
         border-bottom: 1px solid #ddd;
+        margin-left: 0px;
     }
 /*el last child o los comandos de este tipo indican cual de los elementos quiero que afecte la orden que le doy.  En este caso solo elimina la ultima linea de los items*/
     header nav .menu li:last-child {
@@ -318,4 +319,11 @@ main .enlace:hover i {
         padding-bottom: 20px;
         border-bottom: 1px solid #ddd;
     }
+}
+
+@media (max-width: 1100px) {
+.hero>div {
+    padding: 15px 10px;
+}
+
 }
