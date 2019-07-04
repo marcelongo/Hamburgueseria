@@ -126,7 +126,7 @@ header nav li .activo {
     padding: .8em 0%;
 }
 
-.hero .boton {
+.boton {
     background-color: #fa573a;
     padding: .9em;
     display: inline-block;
@@ -134,7 +134,7 @@ header nav li .activo {
     border: 2px solid #fa573a;
 }
 
-.hero .boton:hover {
+.boton:hover {
     background: transparent;
     color: #fa573a;
 }
@@ -226,7 +226,7 @@ main .enlace {
     display: inline-block;
 }
 
-/*con esto estamos haciendo la animacion de las fechitas de "leer mas"*/
+/*con esto estamos haciendo la animacion de las flechitas de "leer mas"*/
 main .enlace i {
     transition: 1s;
 }
@@ -234,6 +234,44 @@ main .enlace i {
 main .enlace:hover i {
     transform: translate(10px);
 }
+
+main #aboutus .columna {
+    width: 50%;
+    padding: 15px;
+}
+
+/*con este comando hacemos que la imagen rote*/
+main #aboutus .imagen .marco {
+    border: 3px solid #fa573a;
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main #aboutus .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+    display: block;
+}
+
+main #aboutus .imagen:hover .marco {
+    transform: rotateZ(0deg)
+}
+
+main #aboutus .imagen:hover img {
+    transform: rotateZ(0deg)
+}
+
+main #aboutus h3 {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+main #aboutus h4 {
+    color: #fa573a;
+    margin: 10px 0px;
+}
+
+
 
 /*el @media hace que podamos hacer la web responsive.  Todo lo que esta fuera de @media es para desktop*/
 @media (max-width: 768px) {
@@ -319,11 +357,18 @@ main .enlace:hover i {
         padding-bottom: 20px;
         border-bottom: 1px solid #ddd;
     }
+
+    main #aboutus .columna {
+        width: 100%;
+    }
+
+    main #aboutus .flex {
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 1100px) {
 .hero>div {
     padding: 15px 10px;
 }
-
 }
